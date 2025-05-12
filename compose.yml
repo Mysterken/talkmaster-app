@@ -1,0 +1,14 @@
+services:
+  talkmaster-dev:
+    container_name: talkmaster_dev
+    build:
+      context: .
+      dockerfile: docker/dev/Dockerfile
+    ports:
+      - '5173:5173'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: yarn run dev --host
+    environment:
+      - NODE_ENV=development
