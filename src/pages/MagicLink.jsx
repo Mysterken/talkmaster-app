@@ -11,7 +11,7 @@ function MagicLink() {
 
     if (token) {
       localStorage.setItem('auth_token', token);
-      navigate('/dashboard');
+      navigate('/home');
     } else {
       navigate('/');
     }
