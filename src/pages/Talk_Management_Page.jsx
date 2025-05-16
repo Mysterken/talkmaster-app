@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Typography, Grid, Paper, Button } from '@mui/material';
 import TalkForm from '../components/TalkForm';
 import TalkCard from '../components/TalkCard';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const initialTalks = [
   { id: 1, title: 'React Basics', topic: 'React', description: 'Introduction to React', duration: 60, level: 'Débutant', room: 'Salle 1', day: 'Lundi' },
@@ -18,6 +20,7 @@ const TalkManagementPage = () => {
 
   return (
     <Container maxWidth="lg">
+      <Navbar/>
       <Typography variant="h4" sx={{ mb: 4 }}>Gestion des Talks</Typography>
       <Button
         variant="contained"
@@ -39,6 +42,7 @@ const TalkManagementPage = () => {
           </Grid>
         ))}
       </Grid>
+      <Footer/>
     </Container>
   );
 };
