@@ -8,7 +8,7 @@ const FilterPanel = ({ onChange }) => {
   };
 
   return (
-    <Box sx={{ maxWidth: 900, margin: '0 auto', mb: 5, p: 2, bgcolor: '#222', borderRadius: 3 }}>
+    <Box sx={{ maxWidth: 900, margin: '0 auto', mb: 5, p: 2, bgcolor: '#fff', borderRadius: 1 }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
           <TextField

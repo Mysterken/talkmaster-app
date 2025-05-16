@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import MagicLink from './pages/MagicLink';
-import Dashboard from './pages/Dashboard';
 import HomePage from './pages/Home';
 import Talk_Management_Page from './pages/Talk_Management_Page';
 import Planning_Page from './pages/Planning_Page';
+import NotFoundPage from './pages/Not_Found_Page';
 
 
 const App = () => {
@@ -20,12 +20,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/magic-link" element={<MagicLink />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/manage-talks" element={<Talk_Management_Page talks={talks} addTalk={addTalk} />} />
         <Route path="/planning" element={<Planning_Page talks={talks} />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
